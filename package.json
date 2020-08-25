@@ -1,0 +1,22 @@
+{
+  "name": "pachi-search",
+  "version": "1.0.0",
+  "description": "Live user search is an App made in Vanilla javaSrcript that uses the GitHub publish API and searchs from an user profile, displaying their avatar, logins and bio.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pachicodes/live-user-search.git"
+  },
+  "author": "pachicodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pachicodes/live-user-search/issues"
+  },
+  "homepage": "https://github.com/pachicodes/live-user-search#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0"
+  }
+}

@@ -14,7 +14,7 @@ btn.addEventListener("click", function () {
   ).then((user) => user.json());
 
   user.then((user) => {
-    console.log(user);
+    console.log(user.items);
 
     const totalCount = user.total_count;
     const countElement = document.createElement("h4");
@@ -26,7 +26,7 @@ btn.addEventListener("click", function () {
     resNumber.append(countElement);
     console.log(resNumber.value);
 
-    /* const avatar = user.avatar_url;
+    /*const avatar = user.avatar_url;
     const nick = user.login;
     const description = user.bio;
     const userPage = user.html_url;
