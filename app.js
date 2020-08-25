@@ -14,7 +14,7 @@ btn.addEventListener("click", function () {
   ).then((user) => user.json());
 
   user.then((user) => {
-    //console.log(user);
+    console.log(user);
 
     const totalCount = user.total_count;
     const countElement = document.createElement("h4");
@@ -26,7 +26,11 @@ btn.addEventListener("click", function () {
     resNumber.append(countElement);
     console.log(resNumber.value);
 
-    const avatar = user.avatar_url;
+    const itemsList = user.items();
+    console.log(itemsList[3]);
+    const usersList = new Map();
+
+    /* const avatar = user.avatar_url;
     const nick = user.login;
     const description = user.bio;
     const userPage = user.html_url;
@@ -46,6 +50,6 @@ btn.addEventListener("click", function () {
     nickElement.append(userLogin);
     res.append(nickElement);
     descriptionElement.append(userBio);
-    res.append(descriptionElement);
+    res.append(descriptionElement); */
   });
 });
