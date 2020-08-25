@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Searching</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      href="https://unpkg.com/@primer/css/dist/primer.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="Header">
+      <h1 class="h1">Live Searching...</h1>
+    </header>
+
+    <section id="search-box" class="Box holder">
+      <div>
+        <label for="enter-user">Enter user name:</label></br>
+        <input
+          class="form-control input-monospace"
+          aria-label="SHA"
+          type="text"
+          id="enter-user"
+          name="enter-user"
+          placeholder="pachicodes"
+        /><br />
+        <button class="btn btn-outline mr-2" type="submit">Search</button><br />
+      </div>
+    </section>
+
+    <section id="result-number" class="flash holder">
+      We found 99 users based on your search.
+    </section>
+
+    <section id="result" class="result holder m-5">
+        <div class="result-user">
+            <div>
+                <img class="avatar" alt="jonrohan" src="https://github.com/jonrohan.png?v=3&s=96" width="48" height="48" />
+                <h3>@jonrohan</h3>
+            </div>
+            <div>
+                <p>78 Repos</p>
+                <p>Description Lorem ipsum dolor, Eos minus at ab laboriosam unde perspiciatis a, quo qui necessitatibus consectetur est, inventore debitis harum eum dolorum, reiciendis alias sequi cumque?</p>
+            </div>
+        </div>
+                <div class="result-user">
+            <div>
+                <img class="avatar" alt="jonrohan" src="https://github.com/jonrohan.png?v=3&s=96" width="48" height="48" />
+                <h3>@jonrohan</h3>
+            </div>
+            <div>
+                <p>78 Repos</p>
+                <p>Description Lorem ipsum dolor, Eos minus at ab laboriosam unde perspiciatis a, quo qui necessitatibus consectetur est, inventore debitis harum eum dolorum, reiciendis alias sequi cumque?</p>
+            </div>
+        </div>
+
+    </section>
+
+    <nav class="paginate-container" aria-label="Pagination">
+      <div class="pagination">
+        <span class="previous_page" aria-disabled="true">Previous</span>
+        <a class="next_page" rel="next" href="#url" aria-label="Next Page"
+          >Next</a
+        >
+      </div>
+    </nav>
+    <script src="app.js"></script>
+  </body>
+</html>
