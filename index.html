@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header class="Header">
       <h1 class="h1">Live Searching...</h1>
@@ -27,21 +28,16 @@
           name="enter-user"
           placeholder="pachicodes"
         /><br />
-        <button id="btn" class="btn btn-outline mr-2" type="submit">Search</button><br />
+        <button id="searchBtn" class="btn btn-outline mr-2" type="submit">Search</button><br />
       </div>
     </section>
 
-    <section id="result-number" class="flash holder">
+    <section id="result-number" class="flash block-holder">
       We found <span id="search-number"></span> users based on your search.
     </section>
 
-    <section id="res" class="result holder">
-        <div class="result-user">
-            <img class="avatar" alt="jonrohan" src="https://github.com/pachicodes.png?v=3&s=96" width="48" height="48" />
-            <h3>@pachicodes</h3>         
-            <p>She/her/ela, Web Developer, Brasileira, INFP, Live Coder && Writter.</p>
-        </div>
-      </section>
+    <section id="result-container" class="block-holder">
+    </section>
 
     <nav class="paginate-container" aria-label="Pagination">
       <div class="pagination">
