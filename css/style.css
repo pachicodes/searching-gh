@@ -9,3 +9,7 @@
 .result-user {
   display: none;
 }
+
+.avatar {
+  width: 50px;
+}
