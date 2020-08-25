@@ -1,2 +1,1 @@
-#Live User Search
-##Search for Github users
+#Live User Search#
