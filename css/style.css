@@ -13,3 +13,12 @@
 .avatar {
   width: 50px;
 }
+
+@media only screen and (max-width: 600px) {
+  .holder {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+  }
+}
