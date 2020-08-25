@@ -3,9 +3,13 @@ const res = document.getElementById("result-container");
 
 btn.addEventListener("click", function () {
   res.innerHTML = "";
-  const user = fetch("https://api.github.com/users/pachicodes").then((user) =>
-    user.json()
-  );
+
+  const userSearch = document.getElementById("enter-user");
+  const wantedUser = userSearch.value;
+
+  const user = fetch(
+    `https://api.github.com/users/${wantedUser}`
+  ).then((user) => user.json());
 
   user.then((user) => {
     const avatar = user.avatar_url;
