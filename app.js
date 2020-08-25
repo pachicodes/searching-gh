@@ -1,4 +1,5 @@
-const searchBtn = document.getElementById("btn");
+const btn = document.getElementById("search-btn");
+const res = document.getElementById("result-container");
 
 btn.addEventListener("click", function () {
   res.innerHTML = "";

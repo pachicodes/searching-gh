@@ -1,4 +1,4 @@
-.block-holder {
+.content-holder {
   width: 40%;
   margin: 30px auto;
   padding: 20px;
@@ -14,7 +14,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .block-holder {
+  .content-holder {
     width: 80%;
     margin: 30px auto;
     padding: 20px;
