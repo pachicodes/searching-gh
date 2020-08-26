@@ -50,6 +50,7 @@ btn.addEventListener("click", function () {
       const pageLink = document.createElement("a");
       pageLink.setAttribute = ("href", userPage);
       pageLink.append(card);
+      console.log(userPage);
 
       res.append(pageLink);
     });
