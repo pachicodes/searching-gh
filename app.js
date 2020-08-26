@@ -37,9 +37,8 @@ btn.addEventListener("click", function () {
       picture.setAttribute("href", userPage);
       picture.setAttribute("class", "avatar");
 
-      const nickElement = document.createElement("a");
+      const nickElement = document.createElement("h3");
       const userLogin = document.createTextNode(nick);
-      nickElement.setAttribute = ("href", userPage);
       nickElement.append(userLogin);
 
       const card = document.createElement("div");
@@ -48,7 +47,11 @@ btn.addEventListener("click", function () {
       card.append(picture);
       card.append(nickElement);
 
-      res.append(card);
+      const pageLink = document.createElement("a");
+      pageLink.setAttribute = ("href", userPage);
+      pageLink.append(card);
+
+      res.append(pageLink);
     });
   });
 });
