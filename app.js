@@ -48,7 +48,8 @@ btn.addEventListener("click", function () {
       card.append(nickElement);
 
       const pageLink = document.createElement("a");
-      pageLink.setAttribute = ("href", userPage);
+      pageLink.href = userPage;
+      pageLink.target = "blank";
       pageLink.append(card);
       console.log(userPage);
 
