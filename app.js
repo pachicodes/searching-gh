@@ -30,7 +30,6 @@ btn.addEventListener("click", function () {
     usersList.map((item) => {
       const avatar = item.avatar_url;
       const nick = item.login;
-      const description = item.bio;
       const userPage = item.html_url;
 
       const picture = document.createElement("img");
@@ -38,17 +37,18 @@ btn.addEventListener("click", function () {
       picture.setAttribute("href", userPage);
       picture.setAttribute("class", "avatar");
 
-      const nickElement = document.createElement("h3");
-      const userLogin = document.createTextNode(`User: ${nick}`);
-
-      const descriptionElement = document.createElement("p");
-      const userBio = document.createTextNode(`Bio: ${description}`);
-
-      res.append(picture);
+      const nickElement = document.createElement("a");
+      const userLogin = document.createTextNode(nick);
+      nickElement.setAttribute = ("href", userPage);
       nickElement.append(userLogin);
-      res.append(nickElement);
-      descriptionElement.append(userBio);
-      res.append(descriptionElement);
+
+      const card = document.createElement("div");
+
+      card.setAttribute("class", "Box Box-row--hover-blue mb-3 p-2");
+      card.append(picture);
+      card.append(nickElement);
+
+      res.append(card);
     });
   });
 });
