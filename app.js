@@ -14,8 +14,6 @@ btn.addEventListener("click", function () {
   ).then((user) => user.json());
 
   user.then((user) => {
-    console.log(user.items);
-
     const totalCount = user.total_count;
     const countElement = document.createElement("h4");
     const countResult = document.createTextNode(
@@ -26,26 +24,31 @@ btn.addEventListener("click", function () {
     resNumber.append(countElement);
     console.log(resNumber.value);
 
-    /*const avatar = user.avatar_url;
-    const nick = user.login;
-    const description = user.bio;
-    const userPage = user.html_url;
+    const usersList = user.items;
+    console.log(usersList);
 
-    const picture = document.createElement("img");
-    picture.setAttribute("src", avatar);
-    picture.setAttribute("href", userPage);
-    picture.setAttribute("class", "avatar");
+    usersList.map((item) => {
+      const avatar = item.avatar_url;
+      const nick = item.login;
+      const description = item.bio;
+      const userPage = item.html_url;
 
-    const nickElement = document.createElement("h3");
-    const userLogin = document.createTextNode(nick);
+      const picture = document.createElement("img");
+      picture.setAttribute("src", avatar);
+      picture.setAttribute("href", userPage);
+      picture.setAttribute("class", "avatar");
 
-    const descriptionElement = document.createElement("p");
-    const userBio = document.createTextNode(description);
+      const nickElement = document.createElement("h3");
+      const userLogin = document.createTextNode(`User: ${nick}`);
 
-    res.append(picture);
-    nickElement.append(userLogin);
-    res.append(nickElement);
-    descriptionElement.append(userBio);
-    res.append(descriptionElement); */
+      const descriptionElement = document.createElement("p");
+      const userBio = document.createTextNode(`Bio: ${description}`);
+
+      res.append(picture);
+      nickElement.append(userLogin);
+      res.append(nickElement);
+      descriptionElement.append(userBio);
+      res.append(descriptionElement);
+    });
   });
 });
