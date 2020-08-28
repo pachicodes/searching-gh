@@ -16,7 +16,6 @@ searchButton.addEventListener("click", function () {
 
   previousButton.addEventListener("click", function () {
     pageNumber--;
-    console.log(pageNumber);
     resultsContainer.innerHTML = "";
     resultsNumber.innerHTML = "";
     searching(wantedUser, pageNumber);
@@ -37,11 +36,20 @@ searchButton.addEventListener("click", function () {
       .then((user) => {
         const totalCount = user.total_count;
         const countElement = document.createElement("h4");
+
         const countResult = document.createTextNode(
           `We found ${totalCount} users in this search`
         );
 
-        countElement.append(countResult);
+        const countResult0 = document.createTextNode(
+          `We found 0 users in this search`
+        );
+
+        if (totalCount == undefined) {
+          countElement.append(countResult0);
+        } else {
+          countElement.append(countResult);
+        }
         resultsNumber.append(countElement);
 
         const usersList = user.items;
