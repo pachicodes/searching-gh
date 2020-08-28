@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Live Searching</title>
+    <title>Searching</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link
@@ -14,10 +14,10 @@
 
   <body>
     <header class="Header">
-      <h1 class="h1">Live Searching...</h1>
+      <h1 class="h1">Searching...</h1>
     </header>
 
-    <section id="search-box" class="Box content-holder">
+    <section class="Box content-holder">
         <label for="enter-user">Enter user name:</label></br>
         <input
           class="form-control input-monospace m-4"
@@ -27,21 +27,21 @@
           name="enter-user"
           placeholder="pachicodes"
         /><br />
-        <button id="search-btn" class="btn btn-outline mr-2" type="submit">Search</button><br />
+        <button id="search-button" class="btn btn-outline mr-2" type="submit">Search</button><br />
     </section>
 
     <section id="result-number" class="flash content-holder">
     </section>
 
     <section id="result-container" class="content-holder">
-      
+
 
     </section>
 
     <nav class="paginate-container" aria-label="Pagination">
       <div class="pagination">
-        <span class="previous_page" aria-disabled="true">Previous</span>
-        <a class="next_page" rel="next" href="#url" aria-label="Next Page"
+        <a id="previous" class="previous_page" rel="previous" aria-label="Previous Page">Previous</a>
+        <a id="next" class="next_page" rel="next"  aria-label="Next Page"
           >Next</a
         >
       </div>
