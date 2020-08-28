@@ -1,16 +1,16 @@
-const searchButton = document.getElementById("search-button");
-const resultsContainer = document.getElementById("result-container");
-const resultsNumber = document.getElementById("result-number");
+const searchButton = document.querySelector("[data-button]");
+const resultsContainer = document.querySelector("[data-resultsCards]");
+const resultsNumber = document.querySelector("[data-resultCount]");
 
 searchButton.addEventListener("click", function () {
   resultsContainer.innerHTML = "";
   resultsNumber.innerHTML = "";
 
-  const userSearch = document.getElementById("enter-user");
+  const userSearch = document.querySelector("[data-userInput]");
   const wantedUser = userSearch.value;
 
-  const previousButton = document.getElementById("previous");
-  const nextButton = document.getElementById("next");
+  const previousButton = document.querySelector("[data-previous]");
+  const nextButton = document.querySelector("[data-next]");
 
   let pageNumber = 1;
 
