@@ -1,6 +1,7 @@
 const searchButton = document.querySelector("[data-button]");
 const resultsContainer = document.querySelector("[data-resultsCards]");
 const resultsNumber = document.querySelector("[data-resultCount]");
+const pagination = document.querySelector("[data-pagination]");
 
 searchButton.addEventListener("click", function () {
   resultsContainer.innerHTML = "";
@@ -34,6 +35,7 @@ searchButton.addEventListener("click", function () {
     )
       .then((user) => user.json())
       .then((user) => {
+        pagination.setAttribute("class", "show-content");
         const totalCount = user.total_count;
         const countElement = document.createElement("h4");
 

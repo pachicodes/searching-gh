@@ -9,6 +9,15 @@
   width: 50px;
 }
 
+.paginate-container {
+  display: none;
+}
+
+.show-content {
+  display: block;
+  text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
   .content-holder {
     width: 80%;
