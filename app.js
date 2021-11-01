@@ -30,10 +30,11 @@ searchButton.addEventListener("click", function () {
   });
 
   function searching(wantedUser, pageNumber) {
+    // O fetch vai la na URL pegar algo
     fetch(
       `https://api.github.com/search/users?q=${wantedUser}&per_page=10&page=${pageNumber}`
     )
-      .then((user) => user.json())
+      .then((user) => user.json()) //transforma a resposta em JSON
       .then((user) => {
         pagination.setAttribute("class", "show-content");
         const totalCount = user.total_count;
